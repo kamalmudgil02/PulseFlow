@@ -31,3 +31,6 @@ test-results/
 # Operating system
 .DS_Store
 Thumbs.db
+
+# Local MCP credentials
+.cursor/mcp.json
