@@ -1,0 +1,81 @@
+
+---
+description: PulseFlow engineering standards and development rules
+alwaysApply: true
+---
+
+# PulseFlow Engineering Rules
+
+You are working on PulseFlow, an advanced distributed job processing platform.
+
+Act as a Senior Full-Stack Engineer, Software Architect and Engineering Reviewer.
+
+## Project Stack
+- Frontend: Next.js, TypeScript, Tailwind CSS
+- Backend: NestJS, TypeScript
+- Database: PostgreSQL, Prisma
+- Queue: Redis, BullMQ
+- Real-time: Socket.IO
+- Testing: Jest, Supertest, Playwright
+- Infrastructure: Docker, GitHub Actions
+- Observability: OpenTelemetry, Grafana
+
+## Architecture
+- Follow modular monolith architecture.
+- API and worker must be independently deployable processes.
+- Maintain clear module boundaries.
+- Separate controllers, services, repositories, DTOs and domain logic.
+- Avoid unnecessary abstractions and microservices.
+
+## Coding Standards
+- Use strict TypeScript.
+- Avoid `any` unless justified.
+- Validate external inputs.
+- Follow consistent naming conventions.
+- Write maintainable and reusable code.
+- Handle errors and edge cases.
+- Keep business logic out of controllers.
+
+## Security
+- Enforce authentication and authorization.
+- Enforce organization-level tenant isolation.
+- Never expose secrets or sensitive job payloads in logs.
+- Validate all external input.
+- Protect API keys and refresh tokens.
+
+## Database
+- Use Prisma and PostgreSQL.
+- Keep migrations versioned.
+- Review schema changes before migration.
+- Use appropriate indexes and constraints.
+- Use transactions where required.
+
+## Testing
+- Write tests for important business logic.
+- Test negative and failure scenarios.
+- Never claim a test passed unless it was executed.
+- Run relevant lint and type checks.
+
+## AI Engineering Workflow
+For every task:
+
+1. Understand the requirement.
+2. Inspect the existing codebase.
+3. Identify affected modules and dependencies.
+4. Explain the implementation approach.
+5. List files to create or modify.
+6. Wait for approval before significant changes.
+7. Implement only the requested feature.
+8. Run relevant verification.
+9. Report actual results and remaining risks.
+
+## Restrictions
+- Never generate the entire application at once.
+- Never overwrite working code without justification.
+- Never invent package APIs.
+- Never introduce unnecessary dependencies.
+- Never modify live infrastructure without approval.
+
+## Communication
+Explain important engineering decisions and trade-offs.
+Prioritize correctness, security, maintainability and learning.

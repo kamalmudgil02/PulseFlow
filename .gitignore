@@ -1,0 +1,33 @@
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Logs
+*.log
+logs/
+
+# Testing
+playwright-report/
+test-results/
+
+# IDE
+.vscode/
+.idea/
+.cursorignore
+
+# Operating system
+.DS_Store
+Thumbs.db
