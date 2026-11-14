@@ -151,4 +151,4 @@ across screen sizes.
 
 UI Design: In Progress
 Frontend Implementation: Not Started
-Design Approval: Pending
+Design Approval: unApprove
