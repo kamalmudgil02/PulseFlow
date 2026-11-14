@@ -1,0 +1,21 @@
+{
+  "name": "@pulseflow/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test dist/queue-name.test.js dist/health.test.js dist/errors.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
+  }
+}
