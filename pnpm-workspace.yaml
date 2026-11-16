@@ -1,3 +1,12 @@
 packages:
-  - "apps/*"
-  - "packages/*"
+  - 'apps/*'
+  - 'packages/*'
+
+# Allow Prisma postinstall scripts to download engine binaries.
+# Required by prisma@7 and @prisma/engines@7 — both run a postinstall
+# that downloads the native query engine binary for the current platform.
+# pnpm 9+ requires explicit opt-in for packages that run build scripts.
+allowBuilds:
+  '@prisma/engines': true
+  msgpackr-extract: true
+  prisma: true

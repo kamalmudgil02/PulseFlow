@@ -9,3 +9,6 @@ docs
 README.md
 CLAUDE.md
 .cursor
+**/dist-test/**
+apps/web/next-env.d.ts
+packages/database/src/generated/prisma/

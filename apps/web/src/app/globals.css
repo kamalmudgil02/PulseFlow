@@ -1,0 +1,21 @@
+/**
+ * Global styles with Tailwind CSS v4.
+ *
+ * Tailwind v4 CSS-first approach:
+ * - @import "tailwindcss" loads all Tailwind utilities
+ * - No tailwind.config.ts required (auto-detection)
+ * - Customize theme using @theme directive below
+ *
+ * @tailwindcss/postcss plugin processes this file
+ */
+@import 'tailwindcss';
+
+/**
+ * Theme customization (future - optional):
+ *
+ * @theme {
+ *   --color-primary: oklch(0.6 0.2 240);
+ *   --font-sans: "Inter", system-ui, sans-serif;
+ *   --breakpoint-2xl: 96rem;
+ * }
+ */

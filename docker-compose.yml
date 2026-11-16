@@ -1,0 +1,42 @@
+# docker-compose.yml
+# PulseFlow local development infrastructure.
+# Provides PostgreSQL 16 and Redis 7 for local development.
+# Applications (api, worker, web) are run natively via pnpm — not in containers.
+#
+# Usage:
+#   docker-compose up -d          # start infrastructure
+#   docker-compose down           # stop (data persisted in volumes)
+#   docker-compose down -v        # stop and delete volumes (destructive)
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: pulseflow
+      POSTGRES_PASSWORD: pulseflow
+      POSTGRES_DB: pulseflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U pulseflow']
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata:
+  redisdata:

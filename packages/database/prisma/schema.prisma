@@ -1,0 +1,19 @@
+// Prisma 7 schema — skeleton only.
+//
+// Status: DATABASE DESIGN PENDING APPROVAL
+//
+// docs/database/design.md is currently DRAFT – Pending Database Approval.
+// Domain models, enums, relations, indexes, and constraints will be added
+// once the database design document receives explicit approval.
+//
+// Prisma 7 requirement: the datasource block does NOT contain a url field.
+// The connection URL is configured in prisma.config.ts under datasource.url.
+
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}

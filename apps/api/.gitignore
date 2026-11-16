@@ -1,0 +1,8 @@
+# Build output
+dist/
+dist-test/
+
+# Environment files
+.env
+.env.local
+.env.*.local

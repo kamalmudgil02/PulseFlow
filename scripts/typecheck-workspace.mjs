@@ -22,8 +22,7 @@ for (const root of roots) {
     }
 
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-    const name =
-      typeof manifest.name === 'string' ? manifest.name : directory;
+    const name = typeof manifest.name === 'string' ? manifest.name : directory;
     found.push(name);
 
     if (typeof manifest.scripts?.typecheck !== 'string') {
